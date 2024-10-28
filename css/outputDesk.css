@@ -689,6 +689,10 @@ video {
   isolation: auto;
 }
 
+.z-2 {
+  z-index: 2;
+}
+
 .z-\[999\] {
   z-index: 999;
 }
@@ -742,8 +746,8 @@ video {
   margin-right: auto;
 }
 
-.ml-\[5em\] {
-  margin-left: 5em;
+.ml-auto {
+  margin-left: auto;
 }
 
 .mr-auto {
@@ -758,8 +762,8 @@ video {
   margin-top: auto;
 }
 
-.ml-auto {
-  margin-left: auto;
+.mb-\[2em\] {
+  margin-bottom: 2em;
 }
 
 .box-border {
@@ -861,12 +865,20 @@ video {
   display: none;
 }
 
+.h-\[15\%\] {
+  height: 15%;
+}
+
 .h-\[2px\] {
   height: 2px;
 }
 
 .h-\[5px\] {
   height: 5px;
+}
+
+.h-\[75\%\] {
+  height: 75%;
 }
 
 .h-\[80\%\] {
@@ -881,12 +893,20 @@ video {
   height: 100vh;
 }
 
-.h-\[75\%\] {
-  height: 75%;
+.h-\[90\%\] {
+  height: 90%;
 }
 
-.h-\[15\%\] {
-  height: 15%;
+.h-\[full\] {
+  height: full;
+}
+
+.h-\[85\%\] {
+  height: 85%;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .w-0 {
@@ -1300,6 +1320,18 @@ video {
 
 .grid-cols-\[1fr\2c 1fr\] {
   grid-template-columns: 1fr 1fr;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\] {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-rows-\[216px\2c 216px\] {
+  grid-template-rows: 216px 216px;
 }
 
 .flex-row {
@@ -1826,7 +1858,15 @@ video {
   word-break: keep-all;
 }
 
+.rounded-xl {
+  border-radius: 12px;
+}
+
 .border {
+  border-width: 1px;
+}
+
+.border-\[1px\] {
   border-width: 1px;
 }
 
@@ -1888,6 +1928,16 @@ video {
   border-style: none;
 }
 
+.border-OsloGray50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(245 246 246 / var(--tw-border-opacity));
+}
+
+.bg-HarvestGold400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 175 110 / var(--tw-bg-opacity));
+}
+
 .bg-LunarGreen700 {
   --tw-bg-opacity: 1;
   background-color: rgb(62 77 69 / var(--tw-bg-opacity));
@@ -1921,6 +1971,10 @@ video {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .bg-fixed {
@@ -2032,17 +2086,19 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-\[\.8em\] {
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+.py-\[\.4em\] {
+  padding-top: .4em;
+  padding-bottom: .4em;
+}
+
 .py-\[2em\] {
   padding-top: 2em;
   padding-bottom: 2em;
-}
-
-.pr-\[100px\] {
-  padding-right: 100px;
-}
-
-.pr-\[300px\] {
-  padding-right: 300px;
 }
 
 .pr-\[30px\] {
@@ -2117,9 +2173,23 @@ video {
   font-family: IranYekan700, IranYekan700;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -2212,21 +2282,24 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.leading-35 {
-  line-height: 35px;
-}
-
 .leading-21 {
   line-height: 21px;
 }
 
-.text-\[\#336699\]\/\[\.35\] {
-  color: rgb(51 102 153 / .35);
+.leading-24 {
+  line-height: 24px;
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+.leading-35 {
+  line-height: 35px;
+}
+
+.leading-41 {
+  line-height: 41px;
+}
+
+.leading-55 {
+  line-height: 55px;
 }
 
 .text-OsloGray200 {
@@ -2237,6 +2310,15 @@ video {
 .text-OsloGray50 {
   --tw-text-opacity: 1;
   color: rgb(245 246 246 / var(--tw-text-opacity));
+}
+
+.text-\[\#336699\]\/\[\.35\] {
+  color: rgb(51 102 153 / .35);
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2889,6 +2971,106 @@ header .Menu-Container::before{
   z-index: 0;
 }
 
+main.Home .mainSwiper > .swiper-pagination{
+  position: absolute;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  left: unset;
+  transform:unset ;
+  -moz-transform:unset ;
+  -ms-transform:unset ;
+  -o-transform:unset ;
+  -webkit-transform:unset ;
+}
+
+main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet{
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #CFD0D2;
+  border-radius:50% ;
+  -webkit-border-radius:50% ;
+  -moz-border-radius:50% ;
+  -ms-border-radius:50% ;
+  -o-border-radius:50% ;
+  opacity: 1;
+  transition:all .5s ease ;
+  -webkit-transition:all .5s ease ;
+  -moz-transition:all .5s ease ;
+  -ms-transition:all .5s ease ;
+  -o-transition:all .5s ease ;
+}
+
+main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  transform:scale(1.5);
+  -webkit-transform:scale(1.5);
+  -moz-transform:scale(1.5);
+  -ms-transform:scale(1.5);
+  -o-transform:scale(1.5);
+}
+
+main.Home .swiper-Banners .overlay{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+main.Home .Section-2::before{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+}
+
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #F5F6F6;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev svg,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next svg{
+  width: 14px;
+}
+
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev::before,
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev::after,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next::before,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next::after{
+  content: '';
+  display: none;
+}
+
+main.Home .mainSwiper .swiper-Banners .swiper-button-next{
+  left: 46%;
+  bottom: 2em;
+  top: unset;
+}
+
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev{
+  right: 48%;
+  bottom: 2em;
+  top: unset;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -2923,6 +3105,11 @@ header .Menu-Container::before{
   cursor: pointer;
 }
 
+.hover\:bg-LunarGreen700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(62 77 69 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -2952,10 +3139,6 @@ header .Menu-Container::before{
 
 .group.Open .group-\[\&\.Open\]\:visible {
   visibility: visible;
-}
-
-.group.Open .group-\[\&\.Open\]\:w-\[40vw\] {
-  width: 40vw;
 }
 
 .group.Open .group-\[\&\.Open\]\:w-\[30vw\] {

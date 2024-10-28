@@ -146,6 +146,53 @@
     padding: 0;
     margin: 0;
   }
+header .Toggles:hover .toggle-cross-1{
+      transform: rotate(-40deg) translate(18px,24px);
+      -webkit-transform: rotate(-40deg) translate(18px,24px);
+      -moz-transform: rotate(-40deg) translate(18px,24px);
+      -ms-transform: rotate(-40deg) translate(18px,24px);
+      -o-transform: rotate(-40deg) translate(18px,24px);
+      transition-duration: .5s;
+      -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+      transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+      animation:toTransparent .5s  ;
+      -webkit-animation:toTransparent .5s  ;
+      animation-fill-mode: forwards;
+}
+header .Toggles:hover .toggle-cross-2{
+  transform: rotate(-50deg) translate(18px,24px);
+  -webkit-transform: rotate(-50deg) translate(18px,24px);
+  -moz-transform: rotate(-50deg) translate(18px,24px);
+  -ms-transform: rotate(-50deg) translate(18px,24px);
+  -o-transform: rotate(-50deg) translate(18px,24px);
+  transition-duration: .5s;
+  -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  animation:toTransparent .5s   ;
+  -webkit-animation:toTransparent .5s   ;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+@keyframes toTransparent {
+    0%{
+        background-color: #F5F6F6;
+    }
 
+    100%{
+        background-color: transparent;
+    }
+}
+header .Menu-Container{
+  background-image: url('/images/pattern3\ \(1\).png');
+}
+header .Menu-Container::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #3E4D45;
+  z-index: 0;
 
-    
+}

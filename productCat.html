@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/outputDesk.css">
+    <style>
+          .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .item {
+    background-color: #ddd;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+    </style>
+</head>
+<body>
+    
+    <div class="productCat bg-OsloGray50">
+        <div class="title pt-[172px] pb-16 w-90p mx-auto">
+            <h1 class="font-IranYekan700 text-OsloGray950 text-[32px] text-center">
+                دسته‌بندی محصولات
+            </h1>
+        </div>
+       <div class="gridContainer flex flex-col flex-wrap justify-start items-start gap-[32px] w-90p mx-auto">
+            <div class="catItem relative">
+                <a href="" title="@title">
+                    <div class="imgS w-full h-full">
+                        <img class="w-full h-full object-cover" src="images/Ash-White-Plain-Sliced 1.png" alt="@title">
+                    </div>
+                </a>
+            </div>
+       </div>
+    </div>
+
+    
+</body>
+</html>

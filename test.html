@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نمایش آیتم‌ها</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        direction: rtl;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        width: 90%;
+      }
+
+      .item {
+        background-color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container" id="itemContainer">
+      <!-- آیتم‌ها با اندازه‌های مختلف -->
+
+      <div class="item">روکش افرا (اوک)</div>
+      <div class="item">روکش ماهگونی</div>
+      <div class="item">روکش توسکا</div>
+      <div class="item">روکش لمبا</div>
+      <div class="item">چوب سند بلاست</div>
+      <div class="item">روکش راش</div>
+      <div class="item">روکش بامبو</div>
+      <div class="item">روکش افرا (اوک)</div>
+      <div class="item">روکش ماهگونی</div>
+      <div class="item">روکش توسکا</div>
+      <div class="item">روکش لمبا</div>
+      <div class="item">چوب سند بلاست</div>
+      <div class="item">روکش راش</div>
+      <div class="item">روکش بامبو</div>
+    </div>
+  </body>
+</html>

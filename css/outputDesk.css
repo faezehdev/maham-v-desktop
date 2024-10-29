@@ -746,6 +746,10 @@ video {
   margin-right: auto;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -758,12 +762,12 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-auto {
-  margin-top: auto;
+.mt-\[2em\] {
+  margin-top: 2em;
 }
 
-.mb-\[2em\] {
-  margin-bottom: 2em;
+.mt-auto {
+  margin-top: auto;
 }
 
 .box-border {
@@ -869,6 +873,10 @@ video {
   height: 15%;
 }
 
+.h-\[216px\] {
+  height: 216px;
+}
+
 .h-\[2px\] {
   height: 2px;
 }
@@ -885,28 +893,20 @@ video {
   height: 80%;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[90\%\] {
-  height: 90%;
-}
-
-.h-\[full\] {
-  height: full;
-}
-
-.h-\[85\%\] {
-  height: 85%;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .w-0 {
@@ -923,6 +923,10 @@ video {
 
 .w-\[58\%\] {
   width: 58%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .w-\[95\%\] {
@@ -1318,10 +1322,6 @@ video {
   grid-auto-flow: column dense;
 }
 
-.grid-cols-\[1fr\2c 1fr\] {
-  grid-template-columns: 1fr 1fr;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1330,8 +1330,16 @@ video {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.grid-rows-\[216px\2c 216px\] {
-  grid-template-rows: 216px 216px;
+.grid-cols-\[1fr\2c 1fr\] {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-\[50\%\2c 50\%\] {
+  grid-template-rows: 50% 50%;
 }
 
 .flex-row {
@@ -1518,6 +1526,10 @@ video {
   justify-items: stretch;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1540,6 +1552,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-\[1em\] {
+  gap: 1em;
 }
 
 .gap-\[6px\] {
@@ -1928,6 +1944,11 @@ video {
   border-style: none;
 }
 
+.border-OsloGray400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(134 136 139 / var(--tw-border-opacity));
+}
+
 .border-OsloGray50 {
   --tw-border-opacity: 1;
   border-color: rgb(245 246 246 / var(--tw-border-opacity));
@@ -2091,14 +2112,34 @@ video {
   padding-right: .8em;
 }
 
+.px-\[1em\] {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .py-\[\.4em\] {
   padding-top: .4em;
   padding-bottom: .4em;
 }
 
+.py-\[1em\] {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .py-\[2em\] {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.py-\[5em\] {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.py-\[\.5em\] {
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 .pr-\[30px\] {
@@ -2202,6 +2243,14 @@ video {
   line-height: 1rem;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2290,6 +2339,10 @@ video {
   line-height: 24px;
 }
 
+.leading-28 {
+  line-height: 28px;
+}
+
 .leading-35 {
   line-height: 35px;
 }
@@ -2300,6 +2353,14 @@ video {
 
 .leading-55 {
   line-height: 55px;
+}
+
+.leading-17\.05 {
+  line-height: 17.05px;
+}
+
+.leading-\[15\.65px\] {
+  line-height: 15.65px;
 }
 
 .text-OsloGray200 {
@@ -2319,6 +2380,11 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-OsloGray950 {
+  --tw-text-opacity: 1;
+  color: rgb(37 37 39 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2955,7 +3021,8 @@ header .Toggles:hover .toggle-cross-2{
   }
 }
 
-header .Menu-Container{
+header .Menu-Container,
+footer .topSec{
   background-image: url('/images/pattern3\ \(1\).png');
 }
 
@@ -3016,7 +3083,8 @@ main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet.swiper-pagi
   -o-transform:scale(1.5);
 }
 
-main.Home .swiper-Banners .overlay{
+main.Home .swiper-Banners .overlay,
+main.Home .Section-3 .overlay{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 100%);
 }
@@ -3069,6 +3137,41 @@ main.Home .mainSwiper .swiper-Banners .swiper-button-prev{
   right: 48%;
   bottom: 2em;
   top: unset;
+}
+
+main.Home .proCat .text{
+  height: 0;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+main.Home .proCat .text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 0%;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+
+main.Home .proCat:hover .text p,
+main.Home .proCat:hover .text{
+  height: 60%;
 }
 
 @media (min-width: 480px) {
@@ -3159,4 +3262,16 @@ main.Home .mainSwiper .swiper-Banners .swiper-button-prev{
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.dark *) {
     paint-order: markers;
   }
+}
+
+.\[\&\.fixeSec\]\:h-screen.fixeSec {
+  height: 100vh;
+}
+
+.\[\&\.fixeSec\]\:overflow-hidden.fixeSec {
+  overflow: hidden;
+}
+
+.\[\&\:not\(\:last-child\)\]\:border-l-\[1px\]:not(:last-child) {
+  border-left-width: 1px;
 }

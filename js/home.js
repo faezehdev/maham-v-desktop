@@ -2,7 +2,25 @@ $('.Home').imagesLoaded( {
 
 },  function() {
     $(document).ready(function() {
-        const interleaveOffset = 0.5;
+        // Enable Scroll
+
+  const lenis = new Lenis()
+
+
+  function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+  }
+  
+  requestAnimationFrame(raf)
+      setTimeout(()=>{
+        lenis.scrollTo(0,0);
+      
+      },100)
+      setTimeout(()=>{
+      
+        lenis.stop();
+      },1001)
         // main slider
         let swiperMin = new Swiper('.mainSwiper', {
             loop: false,
@@ -33,11 +51,7 @@ $('.Home').imagesLoaded( {
                  }
                 },
                 slideChange: function (e) {
-                    let swiper = this;
-                    for(let r= 0 ; r< swiper.slides.length ; r++){
-                        let bullet = document.querySelectorAll(' .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet')
-                        bullet[r].innerHTML = `<span class="inner"></span>`
-                    }      
+                 let swiper = this;    
                  let active =  e.slides[swiper.activeIndex]
                  let id =active.getAttribute('data-index')
                  console.log('active Section',id);
@@ -79,8 +93,63 @@ $('.Home').imagesLoaded( {
                     }
                 }
                   },
+                  reachEnd: function () {
+                    let swiper = this;
+                    setTimeout(function () {
+                      document.querySelector('body').classList.remove('fixeSec')
+                      swiper.params.touchReleaseOnEdges = true;
+                      swiper.params.mousewheel.releaseOnEdges = true;
+                      lenis.start();
+                    console.log("end"); 
+                  }, 500);
+                  },
+                  reachBeginning: function () {
+                    let swiper = this;
+                    setTimeout(function () {
+                      console.log("begin");
+                      // body.style.position="fixed"
+                      document.querySelector('body').classList.add('fixeSec')
+                      lenis.scrollTo('.Section-1');
+                        swiper.params.touchReleaseOnEdges = true;
+                        swiper.params.mousewheel.releaseOnEdges = true;
+                         lenis.stop();
+                    }, 500);
+                  },
               }
             });
+            onEnter=()=>{
+              console.log('onEnter');
+              }
+              onEnterBack=()=>{
+                  console.log('onEnterBack');
+                  
+                  }
+              onLeave=()=>{
+              console.log('onLeave');
+                      
+               }
+               onLeaveBack=()=>{
+               console.log('onLeaveBack');
+               setTimeout(()=> {
+                  // swiperMin.mousewheel.enable();
+                  swiperMin.params.touchReleaseOnEdges = true
+                  swiperMin.params.mousewheel.releaseOnEdges = true;
+                  document.querySelector('body').classList.add('fixeSec')
+                  lenis.stop();
+              },100);           
+               }
+               gsap.to('.swiper-container',{
+                scrollTrigger:{
+                    trigger:'.Home',
+                    start:'top top',
+                    end:'bottom bottom',
+                    scrub:true,
+                    onEnter: () =>onEnter(),
+                    onEnterBack: () =>onEnterBack(),
+                    onLeave: () => onLeave(),
+                    onLeaveBack: () =>onLeaveBack(),
+                }
+                })
           // banner slider
           let SwiperBanner= new Swiper ('.swiper-Banners', {
             slidesPerView: 1,

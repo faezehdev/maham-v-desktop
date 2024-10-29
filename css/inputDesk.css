@@ -182,9 +182,11 @@ header .Toggles:hover .toggle-cross-2{
         background-color: transparent;
     }
 }
-header .Menu-Container{
+header .Menu-Container,
+footer .topSec{
   background-image: url('/images/pattern3\ \(1\).png');
 }
+
 header .Menu-Container::before{
   position: absolute;
   left: 0;
@@ -238,7 +240,8 @@ main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet.swiper-pagi
   -ms-transform:scale(1.5);
   -o-transform:scale(1.5);
 }
-main.Home .swiper-Banners .overlay{
+main.Home .swiper-Banners .overlay,
+main.Home .Section-3 .overlay{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 100%);
 
@@ -287,6 +290,35 @@ main.Home .mainSwiper .swiper-Banners .swiper-button-prev{
   bottom: 2em;
   top: unset;
 }
+main.Home .proCat .text{
+  height: 0;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 main.Home .proCat .text p{
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 0%;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+main.Home .proCat:hover .text p,
+main.Home .proCat:hover .text{
+  height: 60%;
 }

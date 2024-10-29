@@ -869,6 +869,10 @@ video {
   display: none;
 }
 
+.\!h-\[30vh\] {
+  height: 30vh !important;
+}
+
 .h-\[15\%\] {
   height: 15%;
 }
@@ -1974,6 +1978,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2122,6 +2131,11 @@ video {
   padding-bottom: .4em;
 }
 
+.py-\[\.5em\] {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
 .py-\[1em\] {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -2135,11 +2149,6 @@ video {
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
-}
-
-.py-\[\.5em\] {
-  padding-top: .5em;
-  padding-bottom: .5em;
 }
 
 .pr-\[30px\] {
@@ -2219,6 +2228,10 @@ video {
   line-height: 2rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -2241,14 +2254,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[11px\] {
-  font-size: 11px;
-}
-
-.text-\[10px\] {
-  font-size: 10px;
 }
 
 .font-bold {
@@ -2355,10 +2360,6 @@ video {
   line-height: 55px;
 }
 
-.leading-17\.05 {
-  line-height: 17.05px;
-}
-
 .leading-\[15\.65px\] {
   line-height: 15.65px;
 }
@@ -2373,6 +2374,11 @@ video {
   color: rgb(245 246 246 / var(--tw-text-opacity));
 }
 
+.text-OsloGray950 {
+  --tw-text-opacity: 1;
+  color: rgb(37 37 39 / var(--tw-text-opacity));
+}
+
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
 }
@@ -2380,11 +2386,6 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-OsloGray950 {
-  --tw-text-opacity: 1;
-  color: rgb(37 37 39 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3174,6 +3175,11 @@ main.Home .proCat:hover .text{
   height: 60%;
 }
 
+header.dark .Logo svg path,
+header.dark .Search{
+  fill :black
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3246,6 +3252,11 @@ main.Home .proCat:hover .text{
 
 .group.Open .group-\[\&\.Open\]\:w-\[30vw\] {
   width: 30vw;
+}
+
+.group\/header.dark .group-\[\&\.dark\]\/header\:bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .group.Open .group-\[\&\.Open\]\:opacity-\[1\] {

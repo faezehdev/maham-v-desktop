@@ -322,3 +322,8 @@ main.Home .proCat:hover .text p,
 main.Home .proCat:hover .text{
   height: 60%;
 }
+
+header.dark .Logo svg path,
+header.dark .Search{
+fill :black
+}

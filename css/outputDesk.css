@@ -665,6 +665,10 @@ video {
   left: 0px;
 }
 
+.left-\[2\%\] {
+  left: 2%;
+}
+
 .left-\[21em\] {
   left: 21em;
 }
@@ -679,6 +683,10 @@ video {
 
 .top-\[2\.5em\] {
   top: 2.5em;
+}
+
+.top-\[40\%\] {
+  top: 40%;
 }
 
 .isolate {
@@ -741,9 +749,19 @@ video {
   clear: none;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .my-auto {
@@ -753,6 +771,14 @@ video {
 
 .mb-\[1\.5em\] {
   margin-bottom: 1.5em;
+}
+
+.mb-\[2em\] {
+  margin-bottom: 2em;
+}
+
+.mb-\[3em\] {
+  margin-bottom: 3em;
 }
 
 .mb-auto {
@@ -773,6 +799,14 @@ video {
 
 .mt-\[2em\] {
   margin-top: 2em;
+}
+
+.mt-\[3em\] {
+  margin-top: 3em;
+}
+
+.mt-\[7em\] {
+  margin-top: 7em;
 }
 
 .mt-\[8em\] {
@@ -956,6 +990,10 @@ video {
 
 .w-\[58\%\] {
   width: 58%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[75\%\] {
@@ -1933,6 +1971,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
+
 .border-e {
   border-inline-end-width: 1px;
 }
@@ -2174,6 +2216,11 @@ video {
   padding-bottom: .5em;
 }
 
+.py-\[\.8em\] {
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+
 .py-\[1em\] {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -2184,9 +2231,18 @@ video {
   padding-bottom: 2em;
 }
 
+.py-\[3em\] {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
+}
+
+.pb-\[\.5em\] {
+  padding-bottom: .5em;
 }
 
 .pr-\[30px\] {
@@ -2281,6 +2337,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -2419,6 +2480,11 @@ video {
 .text-OsloGray950 {
   --tw-text-opacity: 1;
   color: rgb(37 37 39 / var(--tw-text-opacity));
+}
+
+.text-OsloGray9500 {
+  --tw-text-opacity: 1;
+  color: rgb(38 38 39 / var(--tw-text-opacity));
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -2754,6 +2820,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-75 {
   transition-duration: 75ms;
 }
@@ -3066,8 +3136,10 @@ header .Toggles:hover .toggle-cross-2{
 
 header .Menu-Container,
 footer .topSec,
-main.contactUS{
+main.contactUS,
+main.Search-container header{
   background-image: url('/images/pattern3\ \(1\).png');
+  background-color: #3E4D45;
 }
 
 header .Menu-Container::before{
@@ -3223,8 +3295,28 @@ header.dark .Search{
   fill :black
 }
 
-main.contactUS header .Logo svg path{
+main.contactUS header .Logo svg path,
+main.Search-container header .Logo svg path{
   fill: #D4AF6E;
+}
+
+.InputBoxes input{
+  font-family: "IranYekan400";
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  background-color: #3E4D45;
+  color: #CFD0D2;
+  height: 60px;
+  border-radius:12px ;
+  -webkit-border-radius:12px ;
+  -moz-border-radius:12px ;
+  -ms-border-radius:12px ;
+  -o-border-radius:12px ;
+  border: none;
+  outline: none;
+  padding-right: .8em;
 }
 
 @media (min-width: 480px) {

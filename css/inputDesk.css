@@ -184,8 +184,10 @@ header .Toggles:hover .toggle-cross-2{
 }
 header .Menu-Container,
 footer .topSec,
-main.contactUS{
+main.contactUS,
+main.Search-container header{
   background-image: url('/images/pattern3\ \(1\).png');
+  background-color: #3E4D45;
 }
 
 header .Menu-Container::before{
@@ -328,6 +330,25 @@ header.dark .Logo svg path,
 header.dark .Search{
 fill :black
 }
-main.contactUS header .Logo svg path{
+main.contactUS header .Logo svg path,
+main.Search-container header .Logo svg path{
 fill: #D4AF6E;
+}
+.InputBoxes input{
+  font-family: "IranYekan400";
+  width: 100%;
+ font-size: 16px;
+ font-weight: 400;
+ line-height: 28px;
+ background-color: #3E4D45;
+ color: #CFD0D2;
+ height: 60px;
+ border-radius:12px ;
+ -webkit-border-radius:12px ;
+ -moz-border-radius:12px ;
+ -ms-border-radius:12px ;
+ -o-border-radius:12px ;
+ border: none;
+ outline: none;
+ padding-right: .8em;
 }

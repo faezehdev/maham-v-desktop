@@ -762,6 +762,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-\[2em\] {
   margin-bottom: 2em;
 }
@@ -946,6 +950,10 @@ video {
   height: 100vh;
 }
 
+.h-svh {
+  height: 100svh;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -956,6 +964,10 @@ video {
 
 .w-\[14px\] {
   width: 14px;
+}
+
+.w-\[19px\] {
+  width: 19px;
 }
 
 .w-\[25px\] {
@@ -2261,6 +2273,10 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-\[108px\] {
+  padding-top: 108px;
 }
 
 .pt-\[172px\] {

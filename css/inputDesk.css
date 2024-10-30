@@ -183,7 +183,8 @@ header .Toggles:hover .toggle-cross-2{
     }
 }
 header .Menu-Container,
-footer .topSec{
+footer .topSec,
+main.contactUS{
   background-image: url('/images/pattern3\ \(1\).png');
 }
 
@@ -326,4 +327,7 @@ main.Home .proCat:hover .text{
 header.dark .Logo svg path,
 header.dark .Search{
 fill :black
+}
+main.contactUS header .Logo svg path{
+fill: #D4AF6E;
 }

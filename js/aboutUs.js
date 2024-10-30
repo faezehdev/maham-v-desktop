@@ -2,11 +2,8 @@ $('.aboutUS').imagesLoaded( {
 
 },  function() {
     $(document).ready(function() {
-        // Enable Scroll
-
+  // Enable Scroll
   const lenis = new Lenis()
-
-
   function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
@@ -42,7 +39,6 @@ $('.aboutUS').imagesLoaded( {
             mousewheel: true,
               on: {
                 init: function (swiper) {
-                    let swiper= this
                     let slidess = swiper.slides
                     console.log(slidess);
                     for(let g= 0 ; g < slidess.length ; g++){
@@ -80,18 +76,17 @@ $('.aboutUS').imagesLoaded( {
                     let swiper = this;
                     setTimeout(function () {
                       document.querySelector('body').classList.remove('fixeSec')
-                      swiperMin.mousewheel.disable();
                       swiper.params.touchReleaseOnEdges = true;
                       swiper.params.mousewheel.releaseOnEdges = true;
                       lenis.start();
                     console.log("end"); 
+                    
                   }, 500);
                   },
                   reachBeginning: function () {
                     let swiper = this;
                     setTimeout(function () {
                       console.log("begin");
-                      // body.style.position="fixed"
                       swiperMin.mousewheel.enable();
                       document.querySelector('body').classList.add('fixeSec')
                       lenis.scrollTo('.Section-1');
@@ -100,10 +95,15 @@ $('.aboutUS').imagesLoaded( {
                          lenis.stop();
                     }, 500);
                   },
+                  toEdge:function(){
+                    console.log('bbbb');
+                    
+                  }
               }
             });
             onEnter=()=>{
               console.log('onEnter');
+              swiperMin.mousewheel.disable();
               }
               onEnterBack=()=>{
                   console.log('onEnterBack');

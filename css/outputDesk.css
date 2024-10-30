@@ -746,6 +746,15 @@ video {
   margin-right: auto;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mb-\[1\.5em\] {
+  margin-bottom: 1.5em;
+}
+
 .mb-auto {
   margin-bottom: auto;
 }
@@ -764,6 +773,10 @@ video {
 
 .mt-\[2em\] {
   margin-top: 2em;
+}
+
+.mt-\[8em\] {
+  margin-top: 8em;
 }
 
 .mt-auto {
@@ -885,6 +898,10 @@ video {
   height: 2px;
 }
 
+.h-\[502px\] {
+  height: 502px;
+}
+
 .h-\[5px\] {
   height: 5px;
 }
@@ -921,8 +938,20 @@ video {
   width: 90%;
 }
 
+.w-95p {
+  width: 95%;
+}
+
 .w-\[25px\] {
   width: 25px;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .w-\[58\%\] {
@@ -1924,6 +1953,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-t-\[1px\] {
+  border-top-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1956,6 +1989,11 @@ video {
 .border-OsloGray50 {
   --tw-border-opacity: 1;
   border-color: rgb(245 246 246 / var(--tw-border-opacity));
+}
+
+.bg-Amazon600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 114 82 / var(--tw-bg-opacity));
 }
 
 .bg-HarvestGold400 {
@@ -2153,6 +2191,10 @@ video {
 
 .pr-\[30px\] {
   padding-right: 30px;
+}
+
+.pt-\[\.5em\] {
+  padding-top: .5em;
 }
 
 .text-left {
@@ -3023,7 +3065,8 @@ header .Toggles:hover .toggle-cross-2{
 }
 
 header .Menu-Container,
-footer .topSec{
+footer .topSec,
+main.contactUS{
   background-image: url('/images/pattern3\ \(1\).png');
 }
 
@@ -3178,6 +3221,10 @@ main.Home .proCat:hover .text{
 header.dark .Logo svg path,
 header.dark .Search{
   fill :black
+}
+
+main.contactUS header .Logo svg path{
+  fill: #D4AF6E;
 }
 
 @media (min-width: 480px) {

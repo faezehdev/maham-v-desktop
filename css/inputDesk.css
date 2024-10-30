@@ -182,10 +182,90 @@ header .Toggles:hover .toggle-cross-2{
         background-color: transparent;
     }
 }
+@keyframes cross-1 {
+  0%{
+    transform: rotate(45deg) translate(0em,100%);
+    -webkit-transform: rotate(45deg) translate(0em,100%);
+    -moz-transform: rotate(45deg) translate(0em,100%);
+    -ms-transform: rotate(45deg) translate(0em,100%);
+    -o-transform: rotate(45deg) translate(0em,100%);
+}
+
+  100%{
+    transform: rotate(45deg) translate(0em,-130%);
+    -webkit-transform: rotate(45deg) translate(0em,-130%);
+    -moz-transform: rotate(45deg) translate(0em,-130%);
+    -ms-transform: rotate(45deg) translate(0em,-130%);
+    -o-transform: rotate(45deg) translate(0em,-130%);
+}
+}
+@keyframes cross-2 {
+  0%{
+    transform: rotate(-45deg) translate(0em,100%);
+  -webkit-transform: rotate(-45deg) translate(0em,100%);
+  -moz-transform: rotate(-45deg) translate(0em,100%);
+  -ms-transform: rotate(-45deg) translate(0em,100%);
+  -o-transform: rotate(-45deg) translate(0em,100%);
+}
+
+  100%{
+    transform: rotate(-45deg) translate(0em,-130%);
+    -webkit-transform: rotate(-45deg) translate(0em,-130%);
+    -moz-transform: rotate(-45deg) translate(0em,-130%);
+    -ms-transform: rotate(-45deg) translate(0em,-130%);
+    -o-transform: rotate(-45deg) translate(0em,-130%);
+}
+}
+.Menu-Container .Close:hover .close-cross-1{
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+    transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+    animation: cross-1 .2s   ;
+    -webkit-animation: cross-1 .2s   ;
+    animation-fill-mode: forwards;
+}
+.Menu-Container .Close:hover .close-cross-2{
+  transition-duration: .2s;
+  -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  animation: cross-2 .2s   ;
+  -webkit-animation: cross-2 .2s   ;
+  animation-fill-mode: forwards;
+  animation-delay: .1s;
+}
+.close-cross-1{
+  margin-top: auto;
+  display: flex;
+  height: 40px;
+  width: 10px;
+  left: 44%;
+  background-color: #3E4D45;
+  transform: rotate(45deg) translate(0em,100%);
+  -webkit-transform: rotate(45deg) translate(0em,100%);
+  -moz-transform: rotate(45deg) translate(0em,100%);
+  -ms-transform: rotate(45deg) translate(0em,100%);
+  -o-transform: rotate(45deg) translate(0em,100%);
+  top: 0em;
+}
+.close-cross-2{
+  margin-top: auto;
+  display: flex;
+  height: 40px;
+  width: 5px;
+  left: 56%;
+  background-color: #3E4D45;
+  transform: rotate(-45deg) translate(0em,100%);
+  -webkit-transform: rotate(-45deg) translate(0em,100%);
+  -moz-transform: rotate(-45deg) translate(0em,100%);
+  -ms-transform: rotate(-45deg) translate(0em,100%);
+  -o-transform: rotate(-45deg) translate(0em,100%);
+  top: 0em;
+}
 header .Menu-Container,
 footer .topSec,
 main.contactUS,
-main.Search-container header{
+main.Search-container header,
+main.Error-container {
   background-image: url('/images/pattern3\ \(1\).png');
   background-color: #3E4D45;
 }
@@ -331,7 +411,8 @@ header.dark .Search{
 fill :black
 }
 main.contactUS header .Logo svg path,
-main.Search-container header .Logo svg path{
+main.Search-container header .Logo svg path,
+main.Error-container header .Logo svg path{
 fill: #D4AF6E;
 }
 .InputBoxes input{

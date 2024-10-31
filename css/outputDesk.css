@@ -705,6 +705,10 @@ video {
   z-index: 2;
 }
 
+.z-\[999999\] {
+  z-index: 999999;
+}
+
 .z-\[999\] {
   z-index: 999;
 }
@@ -3265,7 +3269,8 @@ header .Menu-Container,
 footer .topSec,
 main.contactUS,
 main.Search-container header,
-main.Error-container {
+main.Error-container ,
+.Loading-Container{
   background-image: url('/images/pattern3\ \(1\).png');
   background-color: #3E4D45;
 }
@@ -3520,11 +3525,6 @@ main.Error-container header .Logo svg path{
 
 .group.Open .group-\[\&\.Open\]\:w-\[30vw\] {
   width: 30vw;
-}
-
-.group\/header.dark .group-\[\&\.dark\]\/header\:bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .group.Open .group-\[\&\.Open\]\:opacity-\[1\] {

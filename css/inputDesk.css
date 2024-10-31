@@ -265,7 +265,8 @@ header .Menu-Container,
 footer .topSec,
 main.contactUS,
 main.Search-container header,
-main.Error-container {
+main.Error-container ,
+.Loading-Container{
   background-image: url('/images/pattern3\ \(1\).png');
   background-color: #3E4D45;
 }

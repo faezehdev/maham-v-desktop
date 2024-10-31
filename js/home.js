@@ -3,7 +3,16 @@ $('.Home').imagesLoaded( {
 },  function() {
     $(document).ready(function() {
         // Enable Scroll
-
+        gsap.to(".Loading-Container svg", {
+          opacity: 0,
+          delay: 1,
+          ease: "expo.in",
+        });
+        gsap.to(".Loading-Container", {
+          scale: 0,
+          delay: 1,
+          ease: "expo.in",
+        });
   const lenis = new Lenis()
 
 
@@ -107,7 +116,7 @@ $('.Home').imagesLoaded( {
                     let swiper = this;
                     setTimeout(function () {
                       console.log("begin");
-                      // body.style.position="fixed"
+                      swiperMin.mousewheel.enable();
                       document.querySelector('body').classList.add('fixeSec')
                       lenis.scrollTo('.Section-1');
                         swiper.params.touchReleaseOnEdges = true;
@@ -119,6 +128,7 @@ $('.Home').imagesLoaded( {
             });
             onEnter=()=>{
               console.log('onEnter');
+              swiperMin.mousewheel.disable();
               }
               onEnterBack=()=>{
                   console.log('onEnterBack');
@@ -131,7 +141,7 @@ $('.Home').imagesLoaded( {
                onLeaveBack=()=>{
                console.log('onLeaveBack');
                setTimeout(()=> {
-                  // swiperMin.mousewheel.enable();
+                  swiperMin.mousewheel.enable();
                   swiperMin.params.touchReleaseOnEdges = true
                   swiperMin.params.mousewheel.releaseOnEdges = true;
                   document.querySelector('body').classList.add('fixeSec')

@@ -54,3 +54,24 @@ OpBtn.addEventListener('click',()=>{
        
     }
 })
+
+let map1 = document.querySelector('.Map_1')
+let xLat = map1.getAttribute('data-x')
+let yLat = map1.getAttribute('data-y')
+let re1 = yLat.replace('<p>','')
+yLat = re1.replace('</p>','')
+let map_1 = L.map('Map_1',{
+    center:[yLat,xLat]
+    ,zoom:10
+})
+let tiles= new L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+minZoom:'10'
+}).addTo(map_1);
+var customIcon = L.icon({
+  iconUrl: '../images/location.png',
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32]
+  });
+  var marker1 = L.marker([yLat,xLat],{ icon: customIcon }).addTo(map_1);

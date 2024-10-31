@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="css/outputDesk.css">
 </head>
 <body class="fixeSec [&.fixeSec]:h-screen [&.fixeSec]:overflow-hidden duration-150">
+    <div class="Loading-Container w-full h-screen fixed top-0 left-0
+    z-[999999] bg-LunarGreen700 flex justify-center items-center">
+       <div class="logo">
+        <svg width="128" height="176" viewBox="0 0 128 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30.9883 31.1961V41.9223L63.5547 10.6853L96.8897 41.6767V31.237L63.5547 0L30.9883 31.1961Z" fill="#D4AF6E"/>
+            <path d="M11.0039 81.8795V92.6057L63.5551 40.9397L117.077 92.401V81.9614L63.5551 30.2545L11.0039 81.8795Z" fill="#D4AF6E"/>
+            <path d="M0 123.106V133.873L63.555 70.9895L128 133.873V123.392L63.555 60.3043L0 123.106Z" fill="#D4AF6E"/>
+            <path d="M51.257 105.584L44.501 112.38H61.9372V160.033C61.7948 162.036 60.9083 163.91 59.4559 165.278C58.0035 166.646 56.0931 167.406 54.1091 167.406C52.1251 167.406 50.2147 166.646 48.7623 165.278C47.31 163.91 46.4234 162.036 46.2811 160.033V150.535L38.5137 154.629V159.911C38.5137 181.199 69.8259 181.199 69.8259 159.911V112.38H87.5453L80.9106 105.584H51.257Z" fill="#D4AF6E"/>
+            </svg>
+            
+       </div>
+   </div>
     <main class="Home overflow-hidden" dir="rtl">
         <header class="DesktopHeader group w-full fixed top-0 left-0 right-0 z-[999] flex justify-center" dir="rtl">
             <div class="header-inner w-90p mx-auto grid grid-cols-[1fr,1fr] py-[2em]" >
@@ -40,6 +52,7 @@
                 <div class="Left w-full flex justify-end items-center">
                     <div class="Logo">
                         <a href="">
+                            
                             <svg width="32" height="44" viewBox="0 0 32 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.74805 7.79902V10.4806L15.8896 2.67132L24.2234 10.4192V7.80926L15.8896 0L7.74805 7.79902Z" fill="#F5F6F6"/>
                                 <path d="M2.75 20.4699V23.1514L15.8878 10.2349L29.2683 23.1003V20.4903L15.8878 7.56362L2.75 20.4699Z" fill="#F5F6F6"/>
@@ -56,7 +69,10 @@
             bottom-0 h-screen overflow-hidden z-[999] group-[&.Open]:opacity-[1]
             group-[&.Open]:visible bg-LunarGreen700
             flex justify-center opacity-0 invisible duration-[.8s] ">
-            <div class="Close absolute right-0 flex justify-center items-center left-[21em] top-[2.5em] hover:cursor-pointer">
+    
+            <div class="Close overflow-hidden absolute right-0 flex justify-center items-center left-[21em] top-[2.5em] hover:cursor-pointer">
+                <span class="close-cross-1 h-[5px] absolute top-0 left-0 bg-OsloGray50"></span>
+                <span class="close-cross-2 h-[5px] absolute top-0 left-0 bg-OsloGray50"></span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z" fill="#F5F6F6"/>
                     </svg>

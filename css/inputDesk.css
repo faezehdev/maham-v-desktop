@@ -146,6 +146,291 @@
     padding: 0;
     margin: 0;
   }
+header .Toggles:hover .toggle-cross-1{
+      transform: rotate(-40deg) translate(18px,24px);
+      -webkit-transform: rotate(-40deg) translate(18px,24px);
+      -moz-transform: rotate(-40deg) translate(18px,24px);
+      -ms-transform: rotate(-40deg) translate(18px,24px);
+      -o-transform: rotate(-40deg) translate(18px,24px);
+      transition-duration: .5s;
+      -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+      transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+      animation:toTransparent .5s  ;
+      -webkit-animation:toTransparent .5s  ;
+      animation-fill-mode: forwards;
+}
+header .Toggles:hover .toggle-cross-2{
+  transform: rotate(-50deg) translate(18px,24px);
+  -webkit-transform: rotate(-50deg) translate(18px,24px);
+  -moz-transform: rotate(-50deg) translate(18px,24px);
+  -ms-transform: rotate(-50deg) translate(18px,24px);
+  -o-transform: rotate(-50deg) translate(18px,24px);
+  transition-duration: .5s;
+  -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  animation:toTransparent .5s   ;
+  -webkit-animation:toTransparent .5s   ;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+@keyframes toTransparent {
+    0%{
+        background-color: #F5F6F6;
+    }
 
+    100%{
+        background-color: transparent;
+    }
+}
+@keyframes cross-1 {
+  0%{
+    transform: rotate(45deg) translate(0em,100%);
+    -webkit-transform: rotate(45deg) translate(0em,100%);
+    -moz-transform: rotate(45deg) translate(0em,100%);
+    -ms-transform: rotate(45deg) translate(0em,100%);
+    -o-transform: rotate(45deg) translate(0em,100%);
+}
 
-    
+  100%{
+    transform: rotate(45deg) translate(0em,-130%);
+    -webkit-transform: rotate(45deg) translate(0em,-130%);
+    -moz-transform: rotate(45deg) translate(0em,-130%);
+    -ms-transform: rotate(45deg) translate(0em,-130%);
+    -o-transform: rotate(45deg) translate(0em,-130%);
+}
+}
+@keyframes cross-2 {
+  0%{
+    transform: rotate(-45deg) translate(0em,100%);
+  -webkit-transform: rotate(-45deg) translate(0em,100%);
+  -moz-transform: rotate(-45deg) translate(0em,100%);
+  -ms-transform: rotate(-45deg) translate(0em,100%);
+  -o-transform: rotate(-45deg) translate(0em,100%);
+}
+
+  100%{
+    transform: rotate(-45deg) translate(0em,-130%);
+    -webkit-transform: rotate(-45deg) translate(0em,-130%);
+    -moz-transform: rotate(-45deg) translate(0em,-130%);
+    -ms-transform: rotate(-45deg) translate(0em,-130%);
+    -o-transform: rotate(-45deg) translate(0em,-130%);
+}
+}
+.Menu-Container .Close:hover .close-cross-1{
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+    transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+    animation: cross-1 .2s   ;
+    -webkit-animation: cross-1 .2s   ;
+    animation-fill-mode: forwards;
+}
+.Menu-Container .Close:hover .close-cross-2{
+  transition-duration: .2s;
+  -webkit-transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  animation: cross-2 .2s   ;
+  -webkit-animation: cross-2 .2s   ;
+  animation-fill-mode: forwards;
+  animation-delay: .1s;
+}
+.close-cross-1{
+  margin-top: auto;
+  display: flex;
+  height: 40px;
+  width: 10px;
+  left: 44%;
+  background-color: #3E4D45;
+  transform: rotate(45deg) translate(0em,100%);
+  -webkit-transform: rotate(45deg) translate(0em,100%);
+  -moz-transform: rotate(45deg) translate(0em,100%);
+  -ms-transform: rotate(45deg) translate(0em,100%);
+  -o-transform: rotate(45deg) translate(0em,100%);
+  top: 0em;
+}
+.close-cross-2{
+  margin-top: auto;
+  display: flex;
+  height: 40px;
+  width: 5px;
+  left: 56%;
+  background-color: #3E4D45;
+  transform: rotate(-45deg) translate(0em,100%);
+  -webkit-transform: rotate(-45deg) translate(0em,100%);
+  -moz-transform: rotate(-45deg) translate(0em,100%);
+  -ms-transform: rotate(-45deg) translate(0em,100%);
+  -o-transform: rotate(-45deg) translate(0em,100%);
+  top: 0em;
+}
+header .Menu-Container,
+footer .topSec,
+main.contactUS,
+main.Search-container header,
+main.Error-container ,
+.Loading-Container{
+  background-image: url('/images/pattern3\ \(1\).png');
+  background-color: #3E4D45;
+}
+
+header .Menu-Container::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #3E4D45;
+  z-index: 0;
+
+}
+main.Home .mainSwiper > .swiper-pagination{
+   position: absolute;
+   right: 0;
+   top: 0;
+   justify-content: center;
+   align-items: center;
+   margin-right: 2%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   left: unset;
+   transform:unset ;
+   -moz-transform:unset ;
+   -ms-transform:unset ;
+   -o-transform:unset ;
+   -webkit-transform:unset ;
+}
+main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet{
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #CFD0D2;
+  border-radius:50% ;
+  -webkit-border-radius:50% ;
+  -moz-border-radius:50% ;
+  -ms-border-radius:50% ;
+  -o-border-radius:50% ;
+  opacity: 1;
+  transition:all .5s ease ;
+  -webkit-transition:all .5s ease ;
+  -moz-transition:all .5s ease ;
+  -ms-transition:all .5s ease ;
+  -o-transition:all .5s ease ;
+}
+main.Home .mainSwiper > .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  transform:scale(1.5);
+  -webkit-transform:scale(1.5);
+  -moz-transform:scale(1.5);
+  -ms-transform:scale(1.5);
+  -o-transform:scale(1.5);
+}
+main.Home .swiper-Banners .overlay,
+main.Home .Section-3 .overlay{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 100%);
+
+}
+main.Home .Section-2::before{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+}
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #F5F6F6;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev svg,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next svg{
+  width: 14px;
+}
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev::before,
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev::after,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next::before,
+main.Home .mainSwiper .swiper-Banners .swiper-button-next::after{
+content: '';
+display: none;
+}
+main.Home .mainSwiper .swiper-Banners .swiper-button-next{
+  left: 46%;
+  bottom: 2em;
+  top: unset;
+}
+main.Home .mainSwiper .swiper-Banners .swiper-button-prev{
+  right: 48%;
+  bottom: 2em;
+  top: unset;
+}
+main.Home .proCat .text{
+  height: 0;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main.Home .proCat .text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 0%;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+main.Home .proCat:hover .text p,
+main.Home .proCat:hover .text{
+  height: 60%;
+}
+
+header.dark .Logo svg path,
+header.dark .Search{
+fill :black
+}
+main.contactUS header .Logo svg path,
+main.Search-container header .Logo svg path,
+main.Error-container header .Logo svg path{
+fill: #D4AF6E;
+}
+.InputBoxes input{
+  font-family: "IranYekan400";
+  width: 100%;
+ font-size: 16px;
+ font-weight: 400;
+ line-height: 28px;
+ background-color: #3E4D45;
+ color: #CFD0D2;
+ height: 60px;
+ border-radius:12px ;
+ -webkit-border-radius:12px ;
+ -moz-border-radius:12px ;
+ -ms-border-radius:12px ;
+ -o-border-radius:12px ;
+ border: none;
+ outline: none;
+ padding-right: .8em;
+}

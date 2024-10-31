@@ -38,7 +38,8 @@ module.exports = {
        'OsloGray50':'#F5F6F6',
        'Amazon600':'#337252',
       'HarvestGold400':'#D4AF6E',
-      'LunarGreen700':'#3E4D45',       
+      'LunarGreen700':'#3E4D45',   
+       'OsloGray9500':'#262627'
     },
     borderRadius:{
       xl:'12px'

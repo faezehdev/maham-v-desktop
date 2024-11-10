@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
   "html.customData": [
     "./data/html.html-data.json"
   ],
   "liveServer.settings.port": 5501
+=======
+  "html.customData": ["./data/html.html-data.json"]
+>>>>>>> 49ace8dd97f1c93341e7679634de5cc52bbd80a0
 }

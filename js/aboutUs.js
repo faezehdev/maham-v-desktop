@@ -59,16 +59,16 @@ $('.aboutUS').imagesLoaded( {
                        }
                        case '1':{
                            console.log('Section',1);
-                           document.querySelector('header').classList.add('dark')
-   
-                           break
-                       }
-                       case '2':{
-                           console.log('Section',2);
                            document.querySelector('header').classList.remove('dark')
    
                            break
                        }
+                      //  case '2':{
+                      //      console.log('Section',2);
+                      //      document.querySelector('header').classList.remove('dark')
+   
+                      //      break
+                      //  }
                    
                    }
                      },

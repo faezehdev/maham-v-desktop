@@ -29,7 +29,7 @@ $('.Home').imagesLoaded( {
       setTimeout(()=>{
       
         lenis.stop();
-      },1001)
+      },1005)
         // main slider
         let swiperMin = new Swiper('.mainSwiper', {
             loop: false,
@@ -40,16 +40,6 @@ $('.Home').imagesLoaded( {
             watchSlidesProgress: true,
             mousewheelControl: true,
             mousewheel: true,
-              pagination: {
-                el: '.mainSwiper > .swiper-pagination',
-                clickable: true,
-                type: 'bullets',
-                renderBullet: function (index, className) {
-                    console.log(className);
-                return '<span class="' + className + '">'  +'<span class="inner"></span>'+ '</span>';
-            
-                }
-              },
               on: {
                 init:function(){
                  let swiper= this
@@ -148,10 +138,10 @@ $('.Home').imagesLoaded( {
                   lenis.stop();
               },100);           
                }
-               gsap.to('.swiper-container',{
+               gsap.to('footer ',{
                 scrollTrigger:{
                     trigger:'.Home',
-                    start:'top top',
+                    start:'top 0',
                     end:'bottom bottom',
                     scrub:true,
                     onEnter: () =>onEnter(),
@@ -175,6 +165,16 @@ $('.Home').imagesLoaded( {
            navigation: {
             nextEl: ".swiper-Banners .swiper-button-next",
             prevEl: ".swiper-Banners .swiper-button-prev",
+          },
+          pagination: {
+            el: '.mainSwiper .swiper-Banners > .swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+            renderBullet: function (index, className) {
+                console.log(className);
+            return '<span class="' + className + '">'  +'<span class="inner"></span>'+ '</span>';
+        
+            }
           },
             }) 
    

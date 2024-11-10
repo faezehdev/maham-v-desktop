@@ -4,7 +4,6 @@ let Menu = document.querySelector('header')
 let IS = false
 ClBtn.addEventListener('click',()=>{
     console.log('close');
-    
     if(!IS){
         Menu.classList.toggle('Open')
         gsap.to('header .Menu-link',{
@@ -28,8 +27,7 @@ ClBtn.addEventListener('click',()=>{
     }
 })
 OpBtn.addEventListener('click',()=>{
-    console.log('cll');
-    
+    console.log('open');
     if(!IS){
         Menu.classList.toggle('Open')
         gsap.to('header .Menu-link',{
@@ -69,7 +67,7 @@ attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap
 minZoom:'10'
 }).addTo(map_1);
 var customIcon = L.icon({
-  iconUrl: '../images/location.png',
+  iconUrl: './images/location.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]

@@ -15,7 +15,7 @@ requestAnimationFrame(raf)
        }
      else{
          console.log('val',input.value);
-         var url = `/loadSearch.inc?q=${input.value}`;
+         var url = `/load.inc?q=${input.value}`;
          $(".loaded").load(url);}
   
   })
@@ -29,7 +29,8 @@ requestAnimationFrame(raf)
       console.log('clicked');
   console.log('val',inputt );
   console.log('val',inputt.value);
-    window.location.href = `/search.bc?q=${inputt.value}`
+  var url = `/load.inc?q=${inputt.value}`;
+  $(".loaded").load(url);
   setTimeout(() => {
    
   }, 1000);

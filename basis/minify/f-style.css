@@ -1,0 +1,6 @@
+main.Home{
+    min-height: 100vh;
+}
+main.Home .proCat:hover .text p, main.Home .proCat:hover .text {
+    height: 44% !important;
+}

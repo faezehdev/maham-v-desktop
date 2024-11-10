@@ -7,20 +7,20 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9642">
     <member name="tel" type="view" postsql="select * from [db.tel] where TypeID=240"/>
 </basis>
-<header class="DesktopHeader group w-full fixed top-0 left-0 right-0 z-[999] flex justify-center" dir="rtl">
+<header class="DesktopHeader group/header w-full fixed top-0 left-0 right-0 z-[999] flex justify-center" dir="rtl">
     <div class="header-inner w-90p mx-auto grid grid-cols-[1fr,1fr] py-[2em]" >
         <div class="Right w-full flex justify-start items-center">
             <span class="Items w-auto flex justify-start items-start gap-8">
                 <span class="item w-auto flex">
                     <div class="Toggles overflow-hidden relative w-[25px] flex flex-col gap-[6px] hover:cursor-pointer">
-                        <span class="toggle-itme duration-75 delay-75 w-full h-[2px] bg-OsloGray50"></span>
-                        <span class="toggle-itme w-full duration-75 delay-100 h-[2px] bg-OsloGray50"></span>
-                        <span class="toggle-itme w-full h-[2px] duration-75 delay-150 bg-OsloGray50"></span>
+                        <span class="toggle-itme duration-75 delay-75 w-full h-[2px] bg-OsloGray50 group-[&.dark]/header:bg-black"></span>
+                        <span class="toggle-itme w-full duration-75 delay-100 h-[2px] bg-OsloGray50 group-[&.dark]/header:bg-black"></span>
+                        <span class="toggle-itme w-full h-[2px] duration-75 delay-150 bg-OsloGray50 group-[&.dark]/header:bg-black"></span>
                         <span class="toggle-cross-1 w-full rotate-[-40deg] translate-x-[-30px] translate-y-[10px]
-                         h-[5px] absolute top-0 left-0 bg-OsloGray50"></span>
+                         h-[5px] absolute top-0 left-0 bg-OsloGray50 group-[&.dark]/header:bg-black"></span>
                         <span class="toggle-cross-2 delay-100 w-full h-[5px] absolute rotate-[-50deg] translate-x-[-30px]
                          translate-y-[10px]
-                         top-0 left-0 bg-OsloGray50"></span>
+                         top-0 left-0 bg-OsloGray50 group-[&.dark]/header:bg-black"></span>
 
                     </div>
                 </span>
@@ -50,9 +50,9 @@
         </div>
     
     </div>
-    <div class="Menu-Container fixed  top-0  pr-[30px] w-0 group-[&.Open]:w-[30vw] right-0
-    bottom-0 h-screen overflow-hidden z-[999] group-[&.Open]:opacity-[1]
-    group-[&.Open]:visible bg-LunarGreen700
+    <div class="Menu-Container fixed  top-0  pr-[30px] w-0 group-[&.Open]/header:w-[30vw] right-0
+    bottom-0 h-screen overflow-hidden z-[999] group-[&.Open]/header:opacity-[1]
+    group-[&.Open]/header:visible bg-LunarGreen700
     flex justify-center opacity-0 invisible duration-[.8s] ">
 
     <div class="Close overflow-hidden absolute right-0 flex justify-center items-center left-[21em] top-[2.5em] hover:cursor-pointer">
@@ -97,7 +97,7 @@
               </li>
           </ul>
       </div>
-      <div class="Box w-full h-[15%] flex justify-end items-center">
+      <div class="Box w-95p mr-auto h-[15%] flex justify-end items-center">
           <div class="Socials ml-auto flex flex-col justify-center items-start  gap-4">
               <span class="Social-item flex justify-center items-center gap-3">
                 <span class="Icon">

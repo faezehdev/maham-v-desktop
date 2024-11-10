@@ -1,0 +1,40 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210749"> 
+    <member name="list" size="363x360" propertyid="33729" type="list"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جستجو</title>
+    <meta name="description" content="جستجو">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css">
+</head>
+<body class="bg-OsloGray50">
+    <main class="Search-container w-full flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="Search-C w-full flex flex-col mt-[7em]">
+            <div class="InputBoxes w-[60%] relative mx-auto flex justify-center items-center py-[3em]">
+                <input type="text" placeholder="عبارت مورد نظر را جست و جو کنید" id="search2">
+                <div class="absolute left-[2%] top-[40%] searchIcon duration-200 hover:cursor-pointer 
+                w-auto flex justify-start items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 22.5879L17.7463 16.3342C19.3708 14.3475 20.1695 11.8123 19.9772 9.25323C19.7849 6.69411 18.6164 4.3068 16.7133 2.58508C14.8102 0.863367 12.3182 -0.0610178 9.75264 0.00312842C7.18711 0.0672747 4.74438 1.11504 2.92971 2.92971C1.11504 4.74438 0.0672747 7.18711 0.00312842 9.75264C-0.0610178 12.3182 0.863367 14.8102 2.58508 16.7133C4.3068 18.6164 6.69411 19.7849 9.25323 19.9772C11.8123 20.1695 14.3475 19.3708 16.3342 17.7463L22.5879 24L24 22.5879ZM10.0186 18.008C8.4385 18.008 6.89385 17.5394 5.58 16.6615C4.26616 15.7837 3.24215 14.5359 2.63745 13.076C2.03276 11.6162 1.87454 10.0098 2.18281 8.46C2.49109 6.91022 3.252 5.48666 4.36933 4.36933C5.48666 3.252 6.91022 2.49109 8.46 2.18281C10.0098 1.87454 11.6162 2.03276 13.076 2.63745C14.5359 3.24215 15.7837 4.26616 16.6615 5.58C17.5394 6.89385 18.008 8.4385 18.008 10.0186C18.0056 12.1368 17.1631 14.1676 15.6653 15.6653C14.1676 17.1631 12.1368 18.0056 10.0186 18.008Z" fill="#F5F6F6"/>
+                        </svg>
+                        
+                        
+                </div>
+            </div>
+            <div class="loaded w-full flex flex-col">
+             
+        
+            </div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/search.js"></script>
+</body>
+</html>

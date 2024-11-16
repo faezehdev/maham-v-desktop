@@ -1,0 +1,187 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2039" > 
+    <member type="list" name="def-slider" perpage="10" pageno="1" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree"
+     name="def-productCat" parentid="210731" 
+    postsql="select * from [db.def-productCat] where parentid in (210731)" /> 
+</basis>
+<basis core="dbsource" source="media" name="db" lid="1" catid="2040" > 
+    <member type="list" name="catGallery" perpage="10" pageno="1" />
+ </basis>
+ <basis core="dbsource" source="media" name="db" lid="1" catid="2041"> 
+    <member type="list" name="aboutGallery" perpage="10" pageno="1" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2363412"> 
+    <member name="def-about" type="view"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهام پایا جهانیان</title>
+    <meta name="description" content="مهام پایا جهانیان">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css">
+    <style>
+        .Loading-Container{
+    background-color: transparent !important;
+}
+    </style>
+</head>
+<body class="fixeSec [&.fixeSec]:h-screen [&.fixeSec]:overflow-hidden duration-150">
+    <div class="Loading-Container w-full h-screen fixed top-0 left-0
+    z-[999999] flex justify-center items-center">
+    <video  class="lazy" id="loadVideo"
+    autoplay muted loop playsinline width="100%" height="100%"
+     loop class="w-full h-full object-cover" >
+     <source data-src="[##cms.cms.cdn##]/images/logo-motion.webm" type="video/webm">
+    </video>
+   </div>
+    <main class="Home-mobile overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="swiper-container mainSwiper relative w-full h-[100svh] overflow-hidden flex">
+            <div class="swiper-wrapper mainWrapper w-full h-full">
+                <div class="swiper-slide Section-1 w-full h-full">
+                    <!-- inner banner sider -->
+                     <div class="swiper-Banners relative w-full h-full flex overflow-hidden">
+                        <div class="swiper-wrapper w-full h-full">
+                            <basis core="print" datamembername="db.def-slider">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                            <div class="swiper-slide w-full h-full overflow-hidden relative">
+                                <div class="IMG w-full h-full flex justify-center items-center">
+                                    <img src="@largeIMG" alt="@name" title="@name"  class="w-full h-full object-cover">
+                                </div>
+                                <div class="overlay absolute top-0 left-0 z-2 flex justify-center items-center flex-col w-full h-full gap-3">
+                                    <div class="Title w-full flex justify-center items-center">
+                                        <h1 class="font-IranYekan700 font-bold text-[28px] leading-48 text-OsloGray50 text-center">
+                                            @name	
+                                        </h1>
+                                    </div>
+                                    <div class="Text w-80p flex justify-center items-center flex-col">
+                                        <p class="font-IranYekan400 font-normal text-xl leading-35 text-OsloGray50 text-center">
+                                            @description
+                                        </p>
+                                    </div>
+                                    <a href="محصولات" title="محصولات" alt="محصولات"  class="Button-show mx-auto hover:bg-LunarGreen700 duration-[.5s]
+                                     w-max py-[.4em] px-[.8em] border-[1px] border-OsloGray50 flex justify-center items-center
+                                     bg-HarvestGold400 rounded-xl ">
+                                     <span class="w-full flex justify-center items-center 
+                                     font-IranYekan400 font-normal text-sm leading-24 text-OsloGray50">
+                                        محصولات
+                                     </span>
+                                    </a>
+                                </div>
+                            </div>
+                                </face>
+                            </basis>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div> 
+                </div>
+                <div class="swiper-slide Section-3 w-full h-full">
+                    <div class="AboutUs w-full h-full overflow-hidden relative">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                                <basis core="print" datamembername="db.aboutGallery">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="ord=1000">
+                                <img src="@largeIMG" alt="maham" title="maham"  class="w-full h-full object-cover">
+                                    </face>
+                                </basis>
+                            </div>
+                            <div class="overlay absolute top-0 left-0 z-2 flex justify-center items-center flex-col w-full h-full gap-3">
+                                <div class="Title w-full flex justify-center items-center">
+                                    <basis core="print" datamembername="db.def-about">
+                                        <layout>
+                                            @child
+                                        </layout>
+                                        <face filter="TypeID=150">
+                                    <h1 class="font-IranYekan700 font-bold text-2xl leading-41 text-OsloGray50 text-center">
+                                        @Answer
+                                    </h1>
+                                        </face>
+                                    </basis>
+                                </div>
+                                <div class="Text w-[90%] mx-auto flex justify-center items-center flex-col">
+                                    <basis core="print" datamembername="db.def-about">
+                                            <face filter="TypeID=129">
+                                                <p class="font-IranYekan400 font-normal text-base leading-28 text-OsloGray50 text-justify">
+                                                    @Answer
+                                                </p>
+                                            </face>
+                                    </basis>
+                               
+                                </div>
+                                <a href="درباره-ما" title="درباره‌ما" alt="درباره‌ما" class="mt-[2em] Button-show mx-auto hover:bg-LunarGreen700 duration-[.5s]
+                                 w-max py-[.4em] px-[.8em] border-[1px] border-OsloGray50 flex justify-center items-center
+                                 bg-HarvestGold400 rounded-xl ">
+                                 <span class="w-full flex justify-center items-center font-IranYekan400 font-normal text-sm leading-24 text-OsloGray50">
+                                    درباره‌ی ما
+                                 </span>
+                                </a>
+                            </div>
+                    </div>
+                </div>   
+            </div>
+          
+        </div>
+        <div class="productCats section-3 w-full flex relative bg-cover bg-no-repeat pb-[2em]" 
+        style="background-image: url('/images/product-back.jpg');">
+            <div class="proCats-Container w-full mt-auto flex flex-col items-end justify-end">
+                <div class="Title py-[2.5em] pt-[5.5em] w-90p mx-auto flex justify-center items-center">
+                    <h3 class="font-IranYekan700 font-bold text-2xl leading-41 text-OsloGray50 text-center">
+                        دسته‌بندی محصولات تجارت چوب
+                    </h3>
+                </div>
+                <div class="proCats w-90p mx-auto  mb-auto overflow-hidden flex flex-col gap-[2em]">
+                    <basis core="print" datamembername="db.def-productCat">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="catid not in (210731)">
+                <a href="@link" alt="@title" title="@title" class="proCat w-full flex justify-center items-center relative rounded-xl">
+                    <div class="IMG w-full h-full flex justify-center items-center rounded-xl">
+                        <img src="@image" alt="@title" title="@title" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="OV absolute top-0 left-0 z-2 rounded-xl
+                    px-[1em] py-[1em] justify-center items-center
+                    flex w-full h-full flex-col gap-2">
+                        <div class="title w-full flex justify-center items-center">
+                            <h3 class="font-IranYekan700 font-bold text-2xl leading-41 text-OsloGray50 text-center">
+                               @title
+                            </h3>
+                        </div>
+               
+                    </div>
+                </a>
+                        </face>
+                    </basis>
+                </div>
+                <a href="محصولات" title="محصولات"  alt="محصولات"  class="mt-[2em] Button-show mx-auto hover:bg-LunarGreen700 duration-[.5s]
+                w-90p py-[.8em] gap-3  border-[1px] border-OsloGray50 flex justify-center items-center
+                bg-HarvestGold400 rounded-xl ">
+                <span class="w-auto flex justify-center items-center font-IranYekan400 font-normal text-sm leading-24 text-OsloGray50">
+                    همه‌ی محصولات
+                </span>
+                <span class="w-auto flex justify-center items-center">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.26869 0.5L1.34969 4.39272C0.804287 4.96034 0.5 5.71559 0.5 6.50025C0.5 7.28491 0.804287 8.03891 1.34969 8.60653L5.2687 12.5002L6.68269 11.0957L3.05069 7.50024L24.5 7.50025L24.4997 5.50025L3.05069 5.50025L6.68269 1.90452L5.26869 0.5Z" fill="#F5F6F6"/>
+                        </svg>
+                        
+                </span>
+               </a>
+             </div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="script-mobile.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/home-mobile.js"></script>
+</body>
+</html>

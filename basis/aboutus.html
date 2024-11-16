@@ -1,0 +1,126 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2035" > 
+    <member type="list" name="about-sec1" perpage="10" pageno="1" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2363412"> 
+    <member name="aboutus" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2363412"> 
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" source="media" name="db" lid="1" catid="2036" > 
+    <member type="list" name="about-sec3" perpage="10" pageno="1" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره‌ما</title>
+    <meta name="description" content="درباره‌ما">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css">
+<link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+</head>
+<body class="fixeSec [&.fixeSec]:h-screen [&.fixeSec]:overflow-hidden duration-150 bg-OsloGray50">
+    <main class="aboutUS overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="swiper-container mainSwiper relative w-full h-screen overflow-hidden flex">
+            <div class="swiper-wrapper mainWrapper w-full h-full">
+           
+                        <div class="swiper-slide Section-1 w-full flex flex-col relative h-full">
+                            <basis core="print" datamembername="db.about-sec1">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="ord=1000">
+                            <div class="IMG w-full h-screen  flex justify-center items-center">
+                                <img src="@largeIMG	" alt="maham" title="maham" class="w-full h-full object-cover">
+                            </div>
+                                </face>
+                           </basis>
+                           <div class="aboutText bg-White absolute bottom-0 z-1 w-full !h-[30vh] flex flex-col justify-center items-center innerr">
+                            <basis core="print" datamembername="db.aboutus">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID=150">
+                                    <h2 class="font-IranYekan700 font-bold text-[32px] leading-55 text-OsloGray950">
+                                        @Answer
+                                      </h2>
+                                </face>
+                            </basis>
+                            <basis core="print" datamembername="db.aboutus">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID=128">
+                          <p class="font-IranYekan400 font-normal text-2xl leading-41 text-OsloGray950">
+                          @text
+                          </p>
+                                </face>
+                            </basis>
+                          </div>
+                        </div>
+               
+             
+     
+                <div class="swiper-slide Section-3 w-full h-screen">
+                    <div class="AboutUs innerr w-full h-full overflow-hidden relative">
+                        <basis core="print" datamembername="db.about-sec3">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1000">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                                <img src="@largeIMG	" alt="maham" title="maham" class="w-full h-full object-cover">
+                            </div>
+                            </face>
+                        </basis>
+                            <div class="overlay absolute top-0 left-0 z-2 flex justify-center items-center flex-col w-full h-full gap-3">
+                                <div class="Title w-full flex justify-center items-center">
+                                    <basis core="print" datamembername="db.text">
+                                        <layout>
+                                            @child
+                                        </layout>
+                                        <face filter="RowNumber=1">
+                                            <h1 class="font-IranYekan700 font-bold text-2xl leading-41 text-OsloGray50 text-center">
+                                               @text
+                                            </h1>
+                                        </face>
+                                    </basis>
+                                  
+                                </div>
+                                <div class="Text w-[75%] mx-auto flex justify-center items-center flex-col">
+                                    <basis core="print" datamembername="db.text">
+                                        <layout>
+                                            @child
+                                        </layout>
+                                        <face filter="RowNumber=1">
+                                    <p class="font-IranYekan400 font-normal text-base leading-28 text-OsloGray50 text-justify">
+                                        @largetext
+                                    </p>
+                                        </face>
+                                    </basis>
+                                </div>
+                                <a href="درباره-ما" title="درباره‌ما" alt="درباره‌ما" class="mt-[2em] Button-show mx-auto hover:bg-LunarGreen700 duration-[.5s]
+                                 w-max py-[.4em] px-[.8em] border-[1px] border-OsloGray50 flex justify-center items-center
+                                 bg-HarvestGold400 rounded-xl ">
+                                 <span class="w-full flex justify-center items-center font-IranYekan400 font-normal text-sm leading-24 text-OsloGray50">
+                                    درباره‌ی ما
+                                 </span>
+                                </a>
+                            </div>
+                    </div>
+                </div>   
+              
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+</body>
+</html>

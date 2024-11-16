@@ -1,0 +1,54 @@
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" > <member request="cat" type="tree" name="productCat" parentid="210731"  /> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دسته‌بندی محصولات</title>
+
+  <meta name="description" content="دسته‌بندی محصولات مهام جهانیان">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
+    <style>
+   
+    </style>
+  </head>
+  <body>
+    <div class="productCat bg-OsloGray50">
+
+      <basis core="call" file="header.inc" />
+      <div class="title pt-[172px] pb-16 w-90p mx-auto">
+        <h1 class="font-IranYekan700 text-OsloGray950 text-[32px] text-center">
+          دسته‌بندی محصولات
+        </h1>
+      </div>
+      <div class="gridContainer w-90p mx-auto">
+        <basis core="print" datamembername="basisName.productCat">
+          
+            <face filter="catid<>210731">
+              <div class="catItem group 1 relative">
+                <a class="flex h-full w-full justify-center items-center" href="/@link" title="@title">
+                  <div class="imgS w-full h-full overflow-hidden">
+                    <img class="w-full group-hover:scale-110 duration-500 h-full object-cover"
+                      src="/@image"
+                      alt="@title"
+                    />
+                  </div>
+                  <div class="title absolute">
+                      <h2 class="font-IranYekan700 text-2xl text-OsloGray50 text-center">
+                         @title
+                      </h2>
+                  </div>
+                </a>
+              </div>
+                
+            </face>
+        </basis>
+      </div>
+
+      <basis core="call" file="footer.inc" />
+    </div>
+<basis core="call" file="script.inc" />
+  
+    <script src="[##cms.cms.cdn##]/js/productCat.js"></script>
+  </body>
+</html>

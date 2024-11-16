@@ -3,16 +3,43 @@ $('.Home').imagesLoaded( {
 },  function() {
     $(document).ready(function() {
         // Enable Scroll
-        gsap.to(".Loading-Container svg", {
-          opacity: 0,
-          delay: 1,
-          ease: "expo.in",
-        });
-        gsap.to(".Loading-Container", {
-          scale: 0,
-          delay: 1,
-          ease: "expo.in",
-        });
+        
+        let lazyVideos = [...document.querySelectorAll("video.lazy")]
+       
+        if ("IntersectionObserver" in window) {
+          let lazyVideoObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(video) {
+              if (video.isIntersecting) {
+                for (let source in video.target.children) {
+                  let videoSource = video.target.children[source];
+                  if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                    videoSource.src = videoSource.dataset.src;
+                  }
+                }
+       
+                video.target.load();
+                video.target.classList.remove("lazy");
+                lazyVideoObserver.unobserve(video.target);
+              }
+            });
+           });
+       
+       
+          lazyVideos.forEach(function(lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+          });
+          gsap.to(".Loading-Container svg", {
+            opacity: 0,
+            delay: 7,
+            ease: "expo.in",
+          });
+          gsap.to(".Loading-Container", {
+            scale: 0,
+            delay: 7,
+            ease: "expo.in",
+          });
+        }
+      
   const lenis = new Lenis()
 
 

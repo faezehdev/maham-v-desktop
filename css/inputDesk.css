@@ -777,3 +777,9 @@ main.aboutUS .Section-3 .Text p{
 header,footer{
   direction: rtl !important;
 }
+.formp{
+  color:rgb(37 37 39 / var(--tw-text-opacity)) !important;
+  margin: 15px 0;
+  font-weight: bold ;
+font-size : 16px
+}

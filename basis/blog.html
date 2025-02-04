@@ -1,14 +1,23 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210797"> <member name="list-blog" size="363x240" propertyid="7244,7249" type="list" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.list-blog]" /> </basis>
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/outputDesk.css">
+    <title>لیست مقالات</title>
+
+    <meta name="description" content="لیست مقالات مهام پایا جهانیان">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
 </head>
 <body>
     
     <div class="blog" dir="rtl">
+        <basis core="call" file="header.inc" />
         <div class="title pt-[172px] pb-16 w-90p mx-auto">
             <h1 class="font-IranYekan700 text-OsloGray950 text-[32px] text-center">
                 مقاله‌ها
@@ -17,35 +26,55 @@
           </div>
 
           <div class="gridBlog w-90p mx-auto mb-16">
+            
             <div class="grid grid-cols-3 gap-[32px]">
-                <div class="blogItem bg-OsloGray200 rounded-[12px] overflow-hidden" style="box-shadow: 0px 2px 4px 0px #0000000F;box-shadow: 0px 4px 6px 0px #0000001A;">
-                    <div class="imgS overflow-hidden h-[240px]">
-                            <a href="" title="@title">
-                            <img class="w-full h-full object-cover" src="images/Ash-White-Plain-Sliced 1.png" alt="@title">
-                        </a>
-
+            
+                <basis core="print" datamembername="db.list-blog">
+                  
+                    <else-layout>
+                        <div class="para font-IranYekan400 text-base text-OsloGray950">
+                            <p>
+                                متاسفانه مقاله‌ای موجود نیست.
+                            </p>
                         </div>
-                        <div class="info p-4">
-                            <div class="title mb-4 flex justify-between items-center">
-                                <a href="" title="@title">
-                                <h2 class="font-IranYekan700 text-xl text-OsloGray950">
-                                    چوب بامبو
-                                </h2>
+                    </else-layout>
+                    <face>
+                        <div class="blogItem bg-OsloGray200 rounded-[12px] overflow-hidden" style="box-shadow: 0px 2px 4px 0px #0000000F;box-shadow: 0px 4px 6px 0px #0000001A;">
+                            <div class="imgS overflow-hidden h-[240px]">
+                                    <a href="/@link" title="@title">
+                                    <img class="w-full h-full object-cover" src="/@00363X00240prp" alt="@title">
                                 </a>
-                                <span class="font-IranYekan400 text-xs text-OsloGray950">
-                                    ۱۴۰۳/۰۳/۰۷
-                                </span>
-                            </div>
-                            <div class="para font-IranYekan400 text-base text-OsloGray950">
-                                <p>
-                                    بامبو که از نظر گیاه شناسی به عنوان یک علف چوبی طبقه بندی می شود، به چندین دلیل قانع کننده جایگزین مناسبی برای ...
-                                </p>
-                            </div>
+        
+                                </div>
+                                <div class="info p-4">
+                                    <div class="title mb-4 flex justify-between items-center">
+                                        <a href="" title="@title">
+                                        <h2 class="font-IranYekan700 text-xl text-OsloGray950">
+                                           @title
+                                        </h2>
+                                        </a>
+                                        <span class="font-IranYekan400 text-xs text-OsloGray950">
+                                          @prp_7249
+                                        </span>
+                                    </div>
+                                    <div class="para font-IranYekan400 text-base text-OsloGray950">
+                                        <p>
+                                            @substr
+                                        </p>
+                                    </div>
+                                </div>
                         </div>
-                </div>
+                    </face>
+                </basis>
             </div>
           </div>
+
+          <basis core="call" file="footer.inc" />
+
     </div>
     
+
+
+    <basis core="call" file="script.inc" />
 </body>
 </html>

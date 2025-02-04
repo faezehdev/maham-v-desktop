@@ -1,12 +1,34 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+    <member name="Product" type="view"/>
+   
+    <member name="ProductSchemas" type="view" postsql="select * from [db.ProductSchemas] where TypeID not in (150,144,159)"/>
+   
+    </basis> 
+   
+   <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]"> <member name="imagePro" type="list" format="4"/> </basis>
+   <basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" usedforid="[##cms.query.id##]" > <member request="navigationcat" type="tree" name="memberName" /> </basis>	
+   
+
+   <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="[##cms.query.id##]"> <member type="list" name="relPro" size="264x264" blgid="18" /> </basis>	
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/outputDesk.css" />
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/m-style.css" />
     <style>
         html {
             font-size: unset;
@@ -15,7 +37,8 @@
 </head>
 
 <body>
-    <div class="prodcutShow bg-OsloGray50" dir="rtl">
+    <main class="prodcutShow bg-OsloGray50" dir="rtl">
+        <basis core="call" file="header.inc" />
         <div class="breadCrumb w-90p mx-auto mb-12 pt-[172px]">
             <ul class="flex gap-x-2.5 items-center">
                 <li>
@@ -32,56 +55,64 @@
                         </svg>
                     </span>
                 </li>
-                <li>
-                    <a class="font-IranYekan400 text-xl text-OsloGray950" href="/" title=" دسته‌بندی محصولات">
-                        دسته‌بندی محصولات
-                    </a>
-                </li>
-                <li class="last:hidden">
-                    <span>
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.87857 13.414L0.585573 8.121C0.210631 7.74594 0 7.23733 0 6.707C0 6.17667 0.210631 5.66806 0.585573 5.293L5.87857 0L7.29257 1.414L2.00357 6.707L7.29657 12L5.87857 13.414Z"
-                                fill="#252527" />
-                        </svg>
-                    </span>
-                </li>
-                <li>
-                    <h2 class="font-IranYekan700 text-2xl text-OsloGray950">
-                        روکش بامبو
-                    </h2>
-                </li>
+
+                <basis core="print" datamembername="basisName.memberName">
+                 
+                    <face filter="Parentcatid<>210481">
+                        <li>
+                            <a class="font-IranYekan400 text-xl text-OsloGray950" href="/@link" title=" دسته‌بندی محصولات">
+                              @title
+                            </a>
+                        </li>
+                        <li class="last:hidden">
+                            <span>
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.87857 13.414L0.585573 8.121C0.210631 7.74594 0 7.23733 0 6.707C0 6.17667 0.210631 5.66806 0.585573 5.293L5.87857 0L7.29257 1.414L2.00357 6.707L7.29657 12L5.87857 13.414Z"
+                                        fill="#252527" />
+                                </svg>
+                            </span>
+                        </li>
+                        
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.Product">
+                  
+                    <face filter="TypeID=150">
+                        <li>
+                            <h2 class="font-IranYekan700  text-2xl text-OsloGray950">
+                               @Answer
+                            </h2>
+                        </li>
+                        
+                    </face>
+                </basis>
             </ul>
         </div>
 
         <section class="section2 mb-16">
             <div class="flex justify-between w-90p mx-auto gap-x-16">
                 <div class="rSide w-full">
-                    <h1 class="font-IranYekan700 text-2xl text-OsloGray950 mb-4">
-                        روکش بامبو رگه راست پهن روشن
-                    </h1>
-                    <div class="para font-IranYekan400 text-base text-OsloGray950 mb-10">
-                        <p>
-                            بامبو که از نظر گیاه شناسی به عنوان یک علف چوبی طبقه بندی می
-                            شود، به چندین دلیل قانع کننده جایگزین مناسبی برای چوب سنتی است.
-                            قابل ذکر است، این گیاه دارای ممتازترین گیاه در حال رشد در سطح
-                            جهان است، و با گونه های خاصی که نرخ رشد قابل توجهی تا سه فوت در
-                            روز از خود نشان می دهند یکسان می باشد . این ویژگی بامبو را به
-                            عنوان یک ماده انتخابی سازگار با محیط زیست قرار می دهد زیرا می
-                            توان آن را هر سه تا پنج سال به طور پایدار برداشت کرد به طور قابل
-                            توجهی کوتاه تر از چرخه معمولی ده تا بیست ساله مورد نیاز برای
-                            اکثر چوب های نرم است . علاوه بر این، بامبو علیرغم رشد سریع،
-                            استحکام فوق‌العاده‌ای دارد و در میان مقاوم‌ترین مصالح ساختمانی
-                            موجود قرار می‌گیرد.استحکام کششی آن که در psi28000 اندازه گیری
-                            شده است بر یکپارچگی ساختاری و دوام آن تاکید می کند. از نظر
-                            زیبایی، بامبو ظاهر جذابی دارد، با طیف رنگی از کاراملی تا قهوه ای
-                            تیره تر در یک انتها و زرد کم رنگ طبیعی تا رنگ کرم زیتونی روشن در
-                            سمت دیگر. نقش معمولاً یک الگوی مستقیم را نشان می دهد که با یک
-                            بافت رشته ای و درشت تکمیل می شود. قابل ذکر است، علیرغم طبقه بندی
-                            گیاه شناسی، روکش بامبو به خوبی به لکه ها و پوشش ها، مشابه سطوح
-                            چوبی طبیعی، پاسخ می دهد.
-                        </p>
-                    </div>
+
+                    <basis core="print" datamembername="db.Product">
+                       
+                        <face filter="TypeID=150">
+                            <h1 class="font-IranYekan700 titlePro text-2xl text-OsloGray950 mb-4">
+                               @Answer
+                            </h1>
+                            
+                        </face>
+                    </basis>
+
+                    <basis core="print" datamembername="db.Product">
+                        
+                        <face filter="TypeID=144">
+                            <div class="para font-IranYekan400 text-base text-OsloGray950 mb-10">
+                              @Answer
+                            </div>
+                            
+                        </face>
+                    </basis>
 
                     <button type="button" class="btn bg-HarvestGold400 rounded-[12px] py-2 px-4" data-toggle="modal"
                         data-target="#myModal">
@@ -109,7 +140,59 @@
 
                                 </div>
                                 <div class="modal-body" style="border: none;">
-                                    <p>Some text in the modal.</p>
+                                    <div class="para mb-6">
+                                        <p class="font-IranYekan400 text-base text-OsloGray50">
+                                            فرم‌ سفارش محصول
+                                        </p>
+                                    </div>
+                                    
+                                    <form name="myForm" class="homeForm1" action="" onsubmit="return validateForm()" method="post">
+                                        <basis core="schema" run="atclient"
+                                            schemaUrl="/schema/domainform/C9E823EC-44B9-47FC-A4A5-DDB5BB5AC42F/5EAC215B-156B-4469-B9CC-42663BA3F6C5/fa/فرم-سفارش-محصول--"
+                                            displayMode="new" button="[data-btn-add1]" resultSourceId="demo.data1" onRendered="renderFn1">
+                                        </basis>
+                                        <basis core="callback" run="AtClient" triggers="demo.data1" method="onSource1"></basis>
+                                        <basis core="api" url="/schema/domainform/C9E823EC-44B9-47FC-A4A5-DDB5BB5AC42F/fa/editobject"
+                                            method="post" run="atclient"
+                                            body="object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}"
+                                            content-type="application/x-www-form-urlencoded" triggers="edit.object1" if="{##edit.object1##}"
+                                            OnProcessed="OnProcessedEditObject1">
+                                        </basis>
+                                        <div data-bc-question="" class="qclass8 w-fit">
+                                            <div class="responsMsg1 responsMsg">
+                                                <span>فرم با موفقیت ثبت شد.</span>
+                                            </div>
+                                            <div id="requestBox" class="captchaContainerclass captcha-sefaresh2" style="margin-bottom: 20px"
+                                                data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                                                data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                                                <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                                    run="atclient">
+                                                    <member name="code1" type="scalar" request="captcha"></member>
+                                                </basis>
+                                                <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                                    <face>
+                                                        <script type="text/template">
+                
+                                            <span class="captcha-sefaresh">
+                                                <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                                                    alt="captcha" title="captcha" />
+                                                <input type="hidden" name="captchaid" value="@captcha@" />
+                                            </span>
+                                        <img src="[##cms.cms.cdn##]/images/reload-captcha.png" class="refressh cursor-pointer refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+                                        <input type="text" class="codeinputm" name="captcha" placeholder="عبارت امنیتی را وارد کنید" />
+                                        </script>
+                                                    </face>
+                                                </basis>
+                                            </div>
+                                            <button class="bg-HarvestGold400 rounded-[12px] py-2 px-4 border border-OsloGray50 submitBtn" type="submit"
+                                                data-btn-add1 data-btn-submit="">
+                                            
+                
+                                                <span class="font-IranYekan400 text-sm text-OsloGray50"> ارسال فرم</span>
+                                            </button>
+                
+                                        </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -118,10 +201,16 @@
                     </div>
                 </div>
                 <div class="lSide w-full">
-                    <div class="imgS overflow-hidden rounded-[12px]"
-                        style="box-shadow: 0px 2px 4px 0px #0000000F;box-shadow: 0px 4px 6px 0px #0000001A;">
-                        <img class="w-full" src="images/Ash-White-Plain-Sliced 1.png" alt="@name" />
-                    </div>
+                    <basis core="print" datamembername="db.imagePro">
+                       
+                        <face filter="ord=1">
+                            <div class="imgS overflow-hidden rounded-[12px]"
+                                style="box-shadow: 0px 2px 4px 0px #0000000F;box-shadow: 0px 4px 6px 0px #0000001A;">
+                                <img class="w-full" src="/@largeIMG" alt="@name" />
+                            </div>
+                            
+                        </face>
+                    </basis>
                 </div>
             </div>
         </section>
@@ -129,94 +218,234 @@
         <section class="section3 mb-16">
             <div class="flex w-90p p-4 mx-auto bg-OsloGray200 gap-x-16">
                 <div class="rSide w-full">
-                    <h3 class="font-IranYekan700 text-xl text-OsloGray950 py-2 border-b border-b-OsloGray950">
-                        مشخصات فنی:
-                    </h3>
+                    <basis core="group" if="'[##db.ProductSchemas.RowNumber##]' <> ''">
+                        <h3 class="font-IranYekan700 text-xl text-OsloGray950 py-2 border-b border-b-OsloGray950">
+                            مشخصات فنی:
+                        </h3>
+
+                    </basis>
                     <ul>
-                        <li class="flex justify-between py-2 gap-x-4 border-b border-b-OsloGray950">
-                            <span class="font-IranYekan700 text-xl text-OsloGray950">
-                                نوع محصول:
-                            </span>
 
-                            <div class="schemas gap-x-2 flex flex-wrap">
+                        <basis core="view" datamembername="db.ProductSchemas">
+                           
+                            <face filter="prpID<>33724" level="1">
+                                <li class="flex justify-between py-2 gap-x-4 border-b border-b-OsloGray950">
+                                    <span class="font-IranYekan700 text-xl text-OsloGray950">
+                                         @Question:
+                                    </span>
+        
+                                    <div class="schemas gap-x-2 flex flex-wrap">
+                                        @child
+                                    </div>
+                                </li>
+                                
+                            </face>
+                            <face level="2">
                                 <p class="font-IranYekan400 whitespace-nowrap text-base text-OsloGray950">
-                                    نوع محصول
+                                   @Answer
                                 </p>
                                 <span class="font-IranYekan400 text-base text-OsloGray950 last:hidden">,</span>
-                            </div>
-                        </li>
-                        <li class="flex justify-between py-2 gap-x-2 border-b border-b-OsloGray950">
-                            <span class="font-IranYekan700 text-xl text-OsloGray950">
-                                نوع محصول:
-                            </span>
+                            </face>
+                        </basis>
 
-                            <div class="schemas gap-x-2 flex flex-wrap colorSchema items-center">
+                        <basis core="view" datamembername="db.ProductSchemas">
+                     
+                            <face filter="prpID=33724" level="1">
+                                
+                                <li class="flex justify-between py-2 gap-x-2 border-b border-b-OsloGray950">
+                                    <span class="font-IranYekan700 text-xl text-OsloGray950">
+                                         @Question:
+                                    </span>
+        
+                                    <div class="schemas gap-x-2 flex flex-wrap colorSchema items-center">
+                                        @child
+                                    </div>
+                                </li>
+                            </face>
+                            <face level="2">
                                 <p class="font-IranYekan400 whitespace-nowrap text-base text-OsloGray950">
-                                    نوع محصول
+                                  @Answer
                                 </p>
-                                <span class="colorBadge w-[14px] h-[14px] rounded-[100%] border border-OsloGray950" style="background-color: #D4AF6E;"></span>
+                                <span data-color="@Answer" class="colorBadge w-[14px] h-[14px] rounded-[100%] border border-OsloGray950" ></span>
                                 <span class="font-IranYekan400 text-base text-OsloGray950 last:hidden">,</span>
-                            </div>
-                        </li>
+                            </face>
+                        </basis>
                     </ul>
                 </div>
                 <div class="lSide w-full">
-                    <h5 class="font-IranYekan700 text-xl mb-4 text-OsloGray950">
-                        توضیحات محصول
-                    </h5>
-                    <div class="para font-IranYekan400 text-base text-right text-OsloGray950">
-                        <p>
-                            بامبو که از نظر گیاه شناسی به عنوان یک علف چوبی طبقه بندی می شود، به چندین دلیل قانع کننده
-                            جایگزین مناسبی برای چوب سنتی است. قابل ذکر است، این گیاه دارای ممتازترین گیاه در حال رشد در
-                            سطح جهان است، و با گونه های خاصی که نرخ رشد قابل توجهی تا سه فوت در روز از خود نشان می دهند
-                            یکسان می باشد . این ویژگی بامبو را به عنوان یک ماده انتخابی سازگار با محیط زیست قرار می دهد
-                            زیرا می توان آن را هر سه تا پنج سال به طور پایدار برداشت کرد به طور قابل توجهی کوتاه تر از
-                            چرخه معمولی ده تا بیست ساله مورد نیاز برای اکثر چوب های نرم است .
-                            علاوه بر این، بامبو علیرغم رشد سریع، استحکام فوق‌العاده‌ای دارد و در میان مقاوم‌ترین مصالح
-                            ساختمانی موجود قرار می‌گیرد.استحکام کششی آن که در psi28000 اندازه گیری شده است بر یکپارچگی
-                            ساختاری و دوام آن تاکید می کند.
-                            از نظر زیبایی، بامبو ظاهر جذابی دارد، با طیف رنگی از کاراملی تا قهوه ای تیره تر در یک انتها
-                            و زرد کم رنگ طبیعی تا رنگ کرم زیتونی روشن در سمت دیگر. نقش معمولاً یک الگوی مستقیم را نشان
-                            می دهد که با یک بافت رشته ای و درشت تکمیل می شود. قابل ذکر است، علیرغم طبقه بندی گیاه شناسی،
-                            روکش بامبو به خوبی به لکه ها و پوشش ها، مشابه سطوح چوبی طبیعی، پاسخ می دهد.
-
-                        </p>
-                    </div>
+                    <basis core="print" datamembername="db.Product">
+                        <layout>
+                            <h5 class="font-IranYekan700 text-xl mb-4 text-OsloGray950">
+                                توضیحات محصول
+                            </h5>
+                            <div class="para font-IranYekan400 text-base text-right text-OsloGray950">
+                                @child
+                            </div>
+                        </layout>
+                     
+                        <face filter="TypeID=144">
+                            @Answer
+                        </face>
+                    </basis>
                 </div>
             </div>
         </section>
 
-        <section class="section4 pb-16 w-90p mx-auto">
-            <div class="title4 pb-12">
-                <h3 class="font-IranYekan700 text-2xl text-OsloGray950">
-                    محصولات مرتبط
-                </h3>
-            </div>
-            <div class="grid grid-cols-4 gap-[32px]">
+        <basis core="print" datamembername="db.relPro">
+            <layout>
+                <section class="section4 pb-16 w-90p mx-auto">
+                    <div class="title4 pb-12">
+                        <h3 class="font-IranYekan700 text-2xl text-OsloGray950">
+                            محصولات مرتبط
+                        </h3>
+                    </div>
+                    <div class="grid grid-cols-4 gap-[32px]">
+                        @child
+                    </div>
+                </section>
+            </layout>
+            
+            <face>
                 <div class="proItem group relative rounded-[12px] overflow-hidden">
-                    <a class="flex items-center justify-center w-full h-full" href="" title="@title">
-                        <div class="imgS overflow-hidden">
-                            <img class="w-full group-hover:scale-110 duration-500 h-full object-cover" src="images/Ash-White-Plain-Sliced 1.png" alt="@title">
+                    <a class="flex items-center justify-center w-full h-full" href="/@link" title="@title">
+                        <div class="imgS overflow-hidden w-full">
+                            <img class="w-full group-hover:scale-110 duration-500 h-full object-cover" src="/@00264X00264prp" alt="@title">
                         </div>
                         <div class="title absolute w-90p">
                             <h4 class="font-IranYekan700 text-2xl text-OsloGray50 text-center">
-                                روکش بوبینگا
+                              @title
                             </h4>
                            
                         </div>
                     </a>
                 </div>
-            </div>
-          </section>
-    </div>
+                
+            </face>
+        </basis>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+          <basis core="call" file="footer.inc" />
+
+    </main>
+
+
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
+
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/product.js"></script>
+
+    <script src="[##cms.cms.cdn##]/js/scroll.js"></script>
+
 
     <script>
-        //   $(document).on("click", "#cust_btn", function () {
-        //     $("#myModal").modal("toggle");
-        //   });
+        const host = {
+            debug: !1,
+            settings: {
+                "connection.web.trust_login": "https://basispanel.ir/apicms",
+                "connection.web.basiscore": "https://basispanel.ir/apicms",
+                "connection.web.media": "https://basispanel.ir/apicms",
+                "default.dbsource.verb": "post",
+                "default.call.verb": "get",
+                "default.viewCommand.groupColumn": "prpid",
+                "default.dmnid": "4882",
+                "default.binding.regex": "\\{##([^#]*)##\\}",
+            },
+        };
+        function onSource1(args) {
+            console.log("onSource");
+            const captcha = document.querySelector(
+                ".homeForm1 #requestBox input[name='captcha']"
+            ).value;
+            const captchaid = document.querySelector(
+                ".homeForm1 #requestBox input[name='captchaid']"
+            ).value;
+            const stringJson = JSON.stringify(args.source?.rows[0]);
+            console.log("stringJson", stringJson);
+            $bc.setSource("edit.object1", {
+                value: stringJson,
+                captcha: captcha,
+                captchaid: captchaid,
+            });
+        }
+
+        let responsMsg = document.querySelector(".responsMsg1");
+        let responsMsgIn = document.querySelector(".responsMsg1 span");
+
+        async function OnProcessedEditObject1(args) {
+            console.log("OnProcessedEditObject1");
+            const response = args.response;
+            const json = await response.json();
+
+            if (json.errorid == 6) {
+                console.log(json);
+                responsMsgIn.innerHTML = "فرم با موفقیت ثبت شد.";
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+            if (json.errorid == 4) {
+                console.log(json);
+                responsMsgIn.innerHTML = "لطفا کپچا را به درستی وارد کنید.";
+
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+        }
+
+        function renderFn1(params) {
+            let questions = document.querySelectorAll(
+                ".homeForm1 div[data-bc-question]"
+            );
+            questions.forEach((element) => {
+                let title = element.querySelector(
+                    ".homeForm1 [data-bc-question-title]"
+                );
+                let qInput = element.querySelector(".homeForm1 input");
+                let titlePro = document.querySelector(".titlePro");
+                let qTxtArea = element.querySelector(".homeForm1 _textarea");
+                if (title) {
+                    title = element.querySelector(
+                        ".homeForm1 [data-bc-question-title]"
+                    ).innerHTML;
+                    if (qInput) {
+                        qInput.setAttribute("placeholder", title);
+                    } else if (qTxtArea) {
+                        qTxtArea.setAttribute("placeholder", title);
+                    }
+                    
+                    if (title=='نام محصول') {
+                        console.log("title",qInput);
+                        qInput.value=titlePro.innerHTML
+                    }
+                }
+                console.log("q", qInput);
+
+            });
+
+    
+        }
+
+       let submitBtn= document.querySelector(".submitBtn")
+       submitBtn.addEventListener("click",function (params) {
+        const captcha = document.querySelector(
+                ".homeForm1 #requestBox input[name='captcha']"
+            ).value;
+            if (captcha=="") {
+                responsMsgIn.innerHTML = "لطفا کپچا را وارد کنید.";
+
+responsMsg.style.display = "block";
+
+setTimeout(() => {
+    responsMsg.style.display = "none";
+}, 2000);   
+            }
+       })
     </script>
 </body>
 

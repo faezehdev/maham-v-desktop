@@ -801,6 +801,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -984,6 +988,10 @@ video {
   height: 0px;
 }
 
+.h-\[100svh\] {
+  height: 100svh;
+}
+
 .h-\[14px\] {
   height: 14px;
 }
@@ -1049,12 +1057,12 @@ video {
   height: 100svh;
 }
 
-.h-\[100svh\] {
-  height: 100svh;
-}
-
 .w-0 {
   width: 0px;
+}
+
+.w-80p {
+  width: 80%;
 }
 
 .w-9 {
@@ -1101,6 +1109,10 @@ video {
   width: 75%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-\[95\%\] {
   width: 95%;
 }
@@ -1121,6 +1133,11 @@ video {
   width: auto;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1128,14 +1145,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-80p {
-  width: 80%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
 }
 
 .flex-shrink {
@@ -1257,6 +1266,10 @@ video {
 
 .transform-none {
   transform: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .touch-auto {
@@ -1781,16 +1794,16 @@ video {
   gap: 1em;
 }
 
+.gap-\[2em\] {
+  gap: 2em;
+}
+
 .gap-\[32px\] {
   gap: 32px;
 }
 
 .gap-\[6px\] {
   gap: 6px;
-}
-
-.gap-\[2em\] {
-  gap: 2em;
 }
 
 .gap-x-16 {
@@ -2462,6 +2475,11 @@ video {
   padding-bottom: 1em;
 }
 
+.py-\[2\.5em\] {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
 .py-\[2em\] {
   padding-top: 2em;
   padding-bottom: 2em;
@@ -2477,11 +2495,6 @@ video {
   padding-bottom: 5em;
 }
 
-.py-\[2\.5em\] {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -2492,6 +2505,10 @@ video {
 
 .pb-\[\.5em\] {
   padding-bottom: .5em;
+}
+
+.pb-\[2em\] {
+  padding-bottom: 2em;
 }
 
 .pr-\[30px\] {
@@ -2512,10 +2529,6 @@ video {
 
 .pt-\[172px\] {
   padding-top: 172px;
-}
-
-.pb-\[2em\] {
-  padding-bottom: 2em;
 }
 
 .pt-\[5\.5em\] {
@@ -2599,6 +2612,10 @@ video {
   font-size: 10px;
 }
 
+.text-\[28px\] {
+  font-size: 28px;
+}
+
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -2626,10 +2643,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[28px\] {
-  font-size: 28px;
 }
 
 .font-bold {
@@ -2732,16 +2745,16 @@ video {
   line-height: 41px;
 }
 
+.leading-48 {
+  line-height: 48px;
+}
+
 .leading-55 {
   line-height: 55px;
 }
 
 .leading-\[15\.65px\] {
   line-height: 15.65px;
-}
-
-.leading-48 {
-  line-height: 48px;
 }
 
 .text-OsloGray200 {
@@ -4076,6 +4089,13 @@ main.aboutUS .Section-3 .Text p{
 
 header,footer{
   direction: rtl !important;
+}
+
+.formp{
+  color:rgb(37 37 39 / var(--tw-text-opacity)) !important;
+  margin: 15px 0;
+  font-weight: bold ;
+  font-size : 16px
 }
 
 @media (min-width: 480px) {
